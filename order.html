@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Order SHAHI GRASS SILAGE from SHAHI AGRO FARM.">
+<title>Order | SHAHI AGRO FARM</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body data-page="order">
+<header class="nav">
+  <a class="brand" href="index.html" aria-label="SHAHI AGRO FARM home"><span class="brand-lockup"><img src="assets/logo.png" class="nav-brand-logo" alt="SHAHI AGRO FARM logo"><span class="brand-name">SHAHI AGRO FARM</span></span></a>
+  <button class="menu" aria-label="Open menu">☰</button>
+  <nav class="navlinks">
+    <a href="index.html" data-page="home" data-i18n="home">Home</a>
+    <a href="about.html" data-page="about" data-i18n="about">About</a>
+    <a href="benefits.html" data-page="benefits" data-i18n="benefits">Benefits</a>
+    <a href="order.html" data-page="order" data-i18n="order">Order</a>
+    <a href="contact.html" data-page="contact" data-i18n="contact">Contact</a>
+  </nav>
+  <div class="nav-tools">
+    <button class="settings-btn" id="settingsBtn" type="button" aria-label="Settings" title="Settings">⚙</button>
+  </div>
+  <a class="navcta" href="order.html" data-i18n="orderNow">ORDER NOW</a>
+</header>
+
+<div class="settings-panel" id="settingsPanel" aria-hidden="true">
+  <div class="settings-head">
+    <strong data-i18n="settings">Settings</strong>
+    <button type="button" id="closeSettings" aria-label="Close settings">×</button>
+  </div>
+  <div class="settings-row">
+    <span data-i18n="language">Language</span>
+    <div class="settings-options">
+      <button type="button" class="setting-choice" data-language="en">English</button>
+      <button type="button" class="setting-choice" data-language="bn">বাংলা</button>
+    </div>
+  </div>
+  <div class="settings-row">
+    <span data-i18n="theme">Theme</span>
+    <div class="settings-options">
+      <button type="button" class="setting-choice" data-theme-choice="light" data-i18n="bright">Bright</button>
+      <button type="button" class="setting-choice" data-theme-choice="dark" data-i18n="dark">Dark</button>
+    </div>
+  </div>
+</div>
+<div class="settings-backdrop" id="settingsBackdrop"></div>
+
+<main>
+<section class="page-hero"><div class="container reveal"><span class="kicker" data-i18n="orderKicker">Order</span><h1 data-i18n="orderTitle">SHAHI GRASS SILAGE.</h1><p>Choose your quantity and the website will calculate total weight and total price instantly.</p></div></section>
+<section class="section"><div class="container order-wrap">
+<div class="order-card reveal">
+<span class="eyebrow" data-i18n="availableNow">Available now</span>
+<h2 style="font-size:2.2rem">SHAHI GRASS SILAGE</h2>
+<div class="price">৳350 <span class="unit" data-i18n="perPacket">/ packet</span></div>
+<p class="lead"><span data-i18n="50kgPacket">50 KG per packet</span></p>
+<div class="notice"><span data-i18n="minMax">Minimum order: <strong>20 packets</strong> &nbsp; • &nbsp; Maximum order: <strong>400 packets</strong></span></div>
+<div class="qty-row">
+<button class="qty-btn" id="minus" type="button">−</button>
+<input class="qty-input" id="qty" type="number" min="20" max="400" value="20" aria-label="Quantity in packets">
+<button class="qty-btn" id="plus" type="button">+</button>
+</div>
+<div class="calc">
+<div class="calc-box"><small data-i18n="totalWeightLabel">Total Weight</small><strong id="totalWeight">1,000 KG</strong></div>
+<div class="calc-box"><small data-i18n="totalPriceLabel">Total Price</small><strong id="totalPrice">৳7,000</strong></div>
+</div>
+<div class="notice" style="margin-top:20px"><strong data-i18n="paymentRequired">Payment required to confirm your order</strong><br>Choose bKash, Nagad, or Cash on Delivery below. For bKash, send payment to <strong>01799900886
+<span class="whatsapp-contact">WhatsApp: <strong>01814026318</strong></span></strong>. For digital payments, provide your payment number and transaction ID.</div>
+<div class="calc" style="margin-top:14px">
+<div class="calc-box"><small>bKash Official Number</small><strong>01799900886</strong></div>
+<div class="calc-box"><small>Payment Method</small><strong>bKash / Nagad</strong></div>
+</div>
+
+<div class="receipt-note reveal">
+  <div class="receipt-icon">WA</div>
+  <div>
+    <strong data-i18n="receiptTitle">Order Receipt / Confirmation</strong>
+    <p data-i18n="receiptText">After your order is confirmed, the receipt/confirmation will be sent to SHAHI AGRO FARM WhatsApp: 01814026318.</p>
+    <a class="whatsapp-button" href="https://wa.me/8801814026318" target="_blank" rel="noopener noreferrer">WhatsApp: 01814026318</a>
+  </div>
+</div>
+<form class="form" id="orderForm">
+<div class="field"><label for="name">Customer Name</label><input id="name" required placeholder="Your name"></div>
+<div class="field"><label for="phone">Phone Number</label><input id="phone" required type="tel" placeholder="Your phone number"></div>
+<div class="field"><label for="address">Delivery Address</label><textarea id="address" rows="4" required placeholder="Full delivery address"></textarea></div>
+<div class="field"><label for="paymentMethod">Payment Method</label>
+<select id="paymentMethod" required style="width:100%;border:1px solid var(--line);border-radius:14px;padding:14px 15px;font:inherit;background:#fbfffc;color:var(--deep)">
+<option value="">Select payment method</option>
+<option value="bKash">bKash</option>
+<option value="Nagad">Nagad</option>
+<option value="COD" data-i18n="cod">Cash on Delivery</option>
+</select></div>
+<div class="field"><label for="customerPaymentNumber">Customer bKash / Nagad Number</label><input id="customerPaymentNumber" required type="tel" placeholder="Number used to make payment"></div>
+<div class="field"><label for="transactionId">Payment Transaction ID</label><input id="transactionId" required placeholder="Enter your payment transaction ID"></div>
+<div class="notice">Payment confirmation requires a valid <strong>transaction ID</strong>. An order cannot be confirmed without it.</div>
+<button class="btn" type="submit">PLACE ORDER →</button>
+<div class="notice" id="orderSummary">Your order summary will appear here after you submit.</div>
+</form>
+</div>
+<div class="order-visual reveal"><div class="silage-bag"></div><div class="grass"></div></div>
+</div></section>
+</main>
+<footer class="footer">
+<div class="container footer-grid">
+  <div><h3>SHAHI AGRO FARM</h3><p>Modern farm products with a focus on practical, consistent livestock feed solutions.</p></div>
+  <div><h3>Explore</h3><p><a href="index.html">Home</a><br><a href="about.html">About</a><br><a href="benefits.html">Benefits</a><br><a href="order.html">Order</a><br><a href="contact.html">Contact</a></p></div>
+  <div><h3>Contact</h3><p>Babul Chearman Bari, Char Bojlul Korim, Char Bata-3813, Shubornochar, Noakhali</p><p><a href="tel:01799900886">01799900886</a><br><a href="tel:01632638470">01632638470</a></p></div>
+</div>
+<div class="container footer-bottom"><span>© 2026 SHAHI AGRO FARM. All rights reserved.</span><span>SHAHI GRASS SILAGE</span></div>
+
+<a class="facebook-link" href="https://www.facebook.com/share/1Fpd5uyuVb/" target="_blank" rel="noopener noreferrer" aria-label="Visit SHAHI AGRO FARM on Facebook" title="Facebook">
+  <span class="facebook-logo" aria-hidden="true">f</span>
+</a>
+
+</footer>
+<script src="script.js"></script>
+</body></html>
